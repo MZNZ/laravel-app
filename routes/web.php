@@ -17,4 +17,4 @@ Route::view('/contact', 'contact');
 Route::get('customers', 'CustomersController@index');
 Route::get('customers/create', 'CustomersController@create');
 Route::post('/customers', 'CustomersController@store');
-Route::get('/customers/{customer_id}', 'CustomersController@show');
+Route::get('/customers/{customer}', 'CustomersController@show');
