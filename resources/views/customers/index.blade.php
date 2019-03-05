@@ -11,7 +11,9 @@
   <div>
     <ul>
       @foreach ($customers as $customer)
-        <li><strong>{{$customer->name}}</strong> {{$customer->email}} ({{$customer->company->name}}) {{$customer->active}}</li>
+        <li>
+          <strong><a href="/customers/{{$customer->id}}">{{$customer->name}}</a></strong> {{$customer->email}} ({{$customer->company->name}}) {{$customer->active}}
+        </li>
       @endforeach
     </ul>
   </div>
