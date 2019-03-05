@@ -25,23 +25,35 @@
           <option value="0" >Inactive</option>
         </select>
       </div>
+
+      <div>
+        <label for="company_id">Status: </label>
+        <select name="company_id" id="company_id">
+          @foreach ($companies as $company)
+            <option value="{{$company->id}}" >{{$company->name}}</option>
+          @endforeach
+        </select>
+      </div>
+
       <button type="submit">Add Customer</button>
       @csrf
     </form>
     <hr>
+
   <div>
     <h3>Active Customers</h3>
     <ul>
       @foreach ($activeCustomers as $customer)
-        <li><strong>{{$customer->name}}</strong> {{$customer->email}}</li>
+        <li><strong>{{$customer->name}}</strong> {{$customer->email}} ({{$customer->company->name}})</li>
       @endforeach
     </ul>
   </div>
+
   <div>
     <h3>Inactive Customers</h3>
     <ul>
       @foreach ($inactiveCustomers as $customer)
-        <li><strong>{{$customer->name}}</strong> {{$customer->email}}</li>
+        <li><strong>{{$customer->name}}</strong> {{$customer->email}} ({{$customer->company->name}})</li>
       @endforeach
     </ul>
   </div>
