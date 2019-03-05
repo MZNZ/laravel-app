@@ -9,19 +9,9 @@
   </div>
 
   <div>
-    <h3>Active Customers</h3>
     <ul>
-      @foreach ($activeCustomers as $customer)
-        <li><strong>{{$customer->name}}</strong> {{$customer->email}} ({{$customer->company->name}})</li>
-      @endforeach
-    </ul>
-  </div>
-
-  <div>
-    <h3>Inactive Customers</h3>
-    <ul>
-      @foreach ($inactiveCustomers as $customer)
-        <li><strong>{{$customer->name}}</strong> {{$customer->email}} ({{$customer->company->name}})</li>
+      @foreach ($customers as $customer)
+        <li><strong>{{$customer->name}}</strong> {{$customer->email}} ({{$customer->company->name}}) {{$customer->active}}</li>
       @endforeach
     </ul>
   </div>
