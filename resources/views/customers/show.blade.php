@@ -5,6 +5,7 @@
 @section('content')
   <div>
     <h1>{{$customer->name}}'s information</h1>
+    <p><a href="/customers/{{$customer->id}}/edit">Edit</a></p>
   </div>
   <div>
     <p><strong>Name:</strong> {{$customer->name}}</p>
