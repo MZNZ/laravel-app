@@ -6,6 +6,12 @@
   <div>
     <h1>{{$customer->name}}'s information</h1>
     <p><a href="/customers/{{$customer->id}}/edit">Edit</a></p>
+
+    <form action="/customers/{{$customer->id}}" method="POST">
+      @method('DELETE')
+      @csrf
+      <button type="submit">Delete</button>
+    </form>
   </div>
   <div>
     <p><strong>Name:</strong> {{$customer->name}}</p>

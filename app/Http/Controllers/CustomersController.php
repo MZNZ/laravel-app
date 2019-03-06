@@ -39,6 +39,11 @@ class CustomersController extends Controller
     return redirect('customers/'.$customer->id);
   }
 
+  public function destroy(Customer $customer) {
+    $customer->delete();
+    return redirect('customers');
+  }
+
   private function validateRequest() {
     return request()->validate([
       'name' => 'required|min:3',
