@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('master')
 
 @section('title', 'Edit details for '.$customer->name)
 
