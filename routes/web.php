@@ -10,10 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
-Route::view('/', 'home');
+Route::get('/', 'HomeController@index')->name('home');
+
 Route::get('contact', 'ContactFormController@create');
 Route::post('/contact', 'ContactFormController@store');
+
+Route::resources(['customers' => 'CustomersController']);
 // Route::get('customers', 'CustomersController@index');
 // Route::get('customers/create', 'CustomersController@create');
 // Route::post('/customers', 'CustomersController@store');
@@ -22,4 +26,4 @@ Route::post('/contact', 'ContactFormController@store');
 // Route::put('/customers/{customer}', 'CustomersController@update');
 // Route::delete('/customers/{customer}', 'CustomersController@destroy');
 
-Route::resources(['customers' => 'CustomersController']);
+
