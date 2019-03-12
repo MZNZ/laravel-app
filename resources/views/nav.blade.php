@@ -10,10 +10,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="{{ route('home') }}" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="{{ route('contact.create') }}" class="nav-link">Contact Us</a></li>
-              <li class="nav-item"><a href="/customers" class="nav-link">Customer List</a></li>
-              <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
+              <li class="nav-item"><a href="{{ route('customers.index') }}" class="nav-link">Customer List</a></li>
+              <li class="nav-item"><a href="{{ route('about') }}" class="nav-link">About Us</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->

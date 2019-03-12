@@ -4,7 +4,7 @@
 
 @section('content')
   <h1>Edit details for {{$customer->name}}</h1>
-  <form action="/customers/{{$customer->id}}" method="POST">
+<form action="{{ route('customers.update', ['customer' => $customer]) }}" method="POST">
     @method('PUT')
     @include('customers.form')
 

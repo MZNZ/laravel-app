@@ -17,7 +17,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/contact-us', 'ContactFormController@create')->name('contact.create');
 Route::post('/contact-us', 'ContactFormController@store')->name('contact.store');
 
-Route::view('/about', 'about.about')->middleware('test');
+Route::view('/about', 'about.about')->middleware('test')->name('about');
 
 // Route resource will automatically name the routes so that you don't need to name them
 Route::resource('customers', 'CustomersController');

@@ -5,9 +5,9 @@
 @section('content')
   <div>
     <h1>{{$customer->name}}'s information</h1>
-    <p><a href="/customers/{{$customer->id}}/edit">Edit</a></p>
+  <p><a href="{{ route('customers.edit', ['customer' => $customer->id]) }}">Edit</a></p>
 
-    <form action="/customers/{{$customer->id}}" method="POST">
+  <form action="{{ route('customers.destroy', ['customer' => $customer->id])}}" method="POST">
       @method('DELETE')
       @csrf
       <button type="submit">Delete</button>
