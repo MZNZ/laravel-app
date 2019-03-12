@@ -27,3 +27,7 @@ Route::resources(['customers' => 'CustomersController']);
 // Route::delete('/customers/{customer}', 'CustomersController@destroy');
 
 
+// '/welcome' page will be used as a start page to build UI with Vue.js
+Route::get('/welcome', function() {
+  return view('welcome');
+});
