@@ -5,7 +5,7 @@
 @section('content')
   <h1>Contact Us</h1>
   @if ( !session()->has('message'))
-    <form action="/contact" method="POST">
+<form action="{{ route('contact.store') }}" method="POST">
       <div>
         <lable for="name">Name:</lable>
         <input type="text" name="name" value="{{ old('name')}}"/>

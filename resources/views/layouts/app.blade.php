@@ -25,6 +25,11 @@
 
         <main class="py-4">
             <div class="container">
+                @if (session()->has('message'))
+                  <div>
+                    <strong>Success! </strong> {{session()->get('message')}}
+                  </div>
+                @endif
                 @yield('content')
             </div>
         </main>

@@ -14,11 +14,12 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('contact', 'ContactFormController@create');
-Route::post('/contact', 'ContactFormController@store');
+Route::get('/contact-us', 'ContactFormController@create')->name('contact.create');
+Route::post('/contact-us', 'ContactFormController@store')->name('contact.store');
 
 Route::view('/about', 'about.about')->middleware('test');
 
+// Route resource will automatically name the routes so that you don't need to name them
 Route::resource('customers', 'CustomersController');
 // Route::get('customers', 'CustomersController@index');
 // Route::get('customers/create', 'CustomersController@create');
