@@ -15,3 +15,4 @@ What I have done:
 - Use 'session flash' to show confirmation message to user
 - Use make:auth to build authorization logic
 - Use 'auth' middleware to restrict access to customers' create/edit/delete functionality
+- Create and use custom middleware
