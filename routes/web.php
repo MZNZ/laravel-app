@@ -17,7 +17,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('contact', 'ContactFormController@create');
 Route::post('/contact', 'ContactFormController@store');
 
-Route::resources(['customers' => 'CustomersController']);
+Route::resource('customers', 'CustomersController');
 // Route::get('customers', 'CustomersController@index');
 // Route::get('customers/create', 'CustomersController@create');
 // Route::post('/customers', 'CustomersController@store');
