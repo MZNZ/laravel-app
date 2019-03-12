@@ -13,3 +13,5 @@ What I have done:
 - Set up 'Mail Service' configs in .evn for testing purpose
 - Use 'mailabl'. Send user an email after submiting contact information.
 - Use 'session flash' to show confirmation message to user
+- Use make:auth to build authorization logic
+- Use 'auth' middleware to restrict access to customers' create/edit/delete functionality
