@@ -13,6 +13,7 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/contact-us', 'ContactFormController@create')->name('contact.create');
 Route::post('/contact-us', 'ContactFormController@store')->name('contact.store');
