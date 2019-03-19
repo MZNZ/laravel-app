@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Customer;
 use App\Company;
 use Illuminate\Http\Request;
+use App\Events\NewCustomerHasRegisteredEvent;
 
 class CustomersController extends Controller
 {
@@ -24,8 +25,10 @@ class CustomersController extends Controller
   }
 
   public function store() {
-    Customer::create($this->validateRequest());
-    return redirect('customers');
+    $customer = Customer::create($this->validateRequest());
+    // dd($customer);
+    event(new NewCustomerHasRegisteredEvent($customer));
+    // return redirect('customers');
   }
 
   public function show(Customer $customer) {

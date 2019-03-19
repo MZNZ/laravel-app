@@ -17,4 +17,4 @@ What I have done:
 - Use 'auth' middleware to restrict access to customers' create/edit/delete functionality
 - Create and use custom middleware
 - Use 'named route' for all routes instead of using explicit route name
--
+- Add event and listener to send email when new customer is added

@@ -20,7 +20,7 @@ class ContactFormController extends Controller
         'message' => 'required',
         ]);
 
-        Mail::to('test@test.com')->send(new ContactFormMail($data));
+        Mail::to($data['email'])->send(new ContactFormMail($data));
 
         // the lines below are equivalent to each other
         // session()->flash('message', 'Thanks for your message. Let\'s keep in touch.');
