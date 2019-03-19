@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\WelcomeNewCustomerMail;
 
-class WelcomeNewCustomerListener
+class WelcomeNewCustomerListener implements ShouldQueue
 {
     /**
      * Handle the event.

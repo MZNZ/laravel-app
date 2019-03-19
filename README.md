@@ -18,3 +18,4 @@ What I have done:
 - Create and use custom middleware
 - Use 'named route' for all routes instead of using explicit route name
 - Add event and listener to send email when new customer is added
+- Set up queues for sending welcome emails after customer is added
